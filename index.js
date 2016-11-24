@@ -4,7 +4,9 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  response.send("hi");
+  const params = request.query;
+  console.log(params.name);
+  response.send(JSON.stringify(params));
 });
 
 app.listen(app.get('port'), function() {
