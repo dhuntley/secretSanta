@@ -1,5 +1,8 @@
 var express = require("express");
+var fs = require("fs");
+
 var app = express();
+var matches = JSON.parse(fs.readFileSync("matches.json", "utf8"));
 
 app.set("port", (process.env.PORT || 5000));
 
