@@ -5,7 +5,7 @@ app.set("port", (process.env.PORT || 5000));
 
 app.get("/", function(request, response) {
   const params = request.query;
-  console.log(params.name);
+  console.log(params.codename);
   response.setHeader("content-type", "text/javascript");
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.send(JSON.stringify(params));
