@@ -12,8 +12,8 @@ app.get("/", function(request, response) {
 	response.setHeader("content-type", "text/javascript");
 	response.setHeader("Access-Control-Allow-Origin", "*");
 	response.send(JSON.stringify({
-		realName: "Daniel",
-		targetName: "Jenny"
+		realName: matches[params.codename].realName,
+		targetName: matches[params.codename].targetName
 	}));
 });
 
